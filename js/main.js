@@ -60,19 +60,27 @@ toggle.addEventListener("click", () => setNav(!document.body.classList.contains(
 $$(".main-nav a").forEach((a) => a.addEventListener("click", () => setNav(false)));
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") setNav(false); });
 
-/* Highlight the nav link for the section in view (home page) */
+/* Highlight the nav link for the section in view (home page).
+   Checks every section, so the highlight clears in sections that are not in the menu. */
 const navLinks = $$('.main-nav a[href^="#"]:not(.btn)');
 if (navLinks.length) {
-  const sectionObs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        navLinks.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === `#${entry.target.id}`));
-      });
-    },
-    { rootMargin: "-45% 0px -50% 0px" }
-  );
-  navLinks.forEach((l) => { const s = $(l.getAttribute("href")); if (s) sectionObs.observe(s); });
+  const sections = $$("main section[id]");
+  const setActive = () => {
+    const line = window.innerHeight * 0.35;   // a point a third of the way down the screen
+    let current = "";
+    sections.forEach((sec) => {
+      const r = sec.getBoundingClientRect();
+      if (r.top <= line && r.bottom > line) current = sec.id;
+    });
+    navLinks.forEach((l) => {
+      const on = l.getAttribute("href") === `#${current}`;
+      l.classList.toggle("active", on);
+      if (on) l.setAttribute("aria-current", "true"); else l.removeAttribute("aria-current");
+    });
+  };
+  window.addEventListener("scroll", setActive, { passive: true });
+  window.addEventListener("resize", setActive);
+  setActive();
 }
 
 /* ---------- Reveal on scroll ---------- */
