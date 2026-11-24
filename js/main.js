@@ -39,6 +39,9 @@ $$("[data-insta-link]").forEach((a) => {
   else a.remove();
 });
 
+/* On blog posts, the Book icon jumps to the booking form on the same page */
+if ($("#book")) $$(".qa-book").forEach((a) => (a.href = "#book"));
+
 $$(".js-year").forEach((el) => (el.textContent = new Date().getFullYear()));
 
 /* ---------- Header ---------- */
