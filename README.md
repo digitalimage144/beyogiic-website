@@ -28,7 +28,7 @@ WhatsApp enquiries sent from an article say which article it was, so you can see
 
 1. **Domain:** the site is set up for `https://www.beyogiic.in` (canonical links, sitemap, robots.txt and the `CNAME` file GitHub Pages uses).
    DNS at the registrar: four A records for `@` (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153)
-   and a CNAME for `www` pointing to `jude1234.github.io`. Then tick **Enforce HTTPS** in the repository Settings → Pages.
+   and a CNAME for `www` pointing to `digitalimage144.github.io`. Then tick **Enforce HTTPS** in the repository Settings → Pages.
 2. **Instagram:** if you have an Instagram page, add `"sameAs": ["https://instagram.com/..."]` to the business details in the `<head>` of `index.html`, next to `"telephone"`.
 3. **Google Search Console** (free): add the site, then submit `https://www.beyogiic.in/sitemap.xml`.
 4. **Google Business Profile:** set it up as a service-area business (address hidden, serving Malad West and nearby), using the same name and phone number as the website.
@@ -37,4 +37,4 @@ WhatsApp enquiries sent from an article say which article it was, so you can see
 
 ## Hosting
 
-Hosted on GitHub Pages from https://github.com/jude1234/beyogiic-website (branch `main`, root folder). Changes go live a minute or two after they are pushed.
+Hosted on GitHub Pages from https://github.com/digitalimage144/beyogiic-website (branch `main`, root folder). Changes go live a minute or two after they are pushed.
