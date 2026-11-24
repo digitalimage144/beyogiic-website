@@ -222,8 +222,8 @@ h1 em, h2 em { font-style: italic; color: var(--rose-deep); font-weight: 400; }
   box-shadow: var(--shadow);
   display: flex; align-items: center; gap: 14px;
 }
-.badge-num { font-family: var(--serif); font-size: 2.8rem; line-height: 1; color: var(--rose-deep); }
-.badge-text { font-size: 0.82rem; line-height: 1.35; color: var(--muted); }
+.badge-num { font-family: var(--serif); font-size: 3.6rem; font-weight: 600; line-height: 1; color: var(--rose-deep); }
+.badge-text { font-size: 1.02rem; font-weight: 500; line-height: 1.35; color: var(--ink); }
 
 /* ---------- Strip ---------- */
 .strip { background: var(--forest); color: var(--ivory); overflow: hidden; padding: 20px 0; }
@@ -295,7 +295,10 @@ h1 em, h2 em { font-style: italic; color: var(--rose-deep); font-weight: 400; }
 .service-body { padding: 30px 30px 34px; display: flex; flex-direction: column; flex: 1; }
 .service-num { font-size: 0.75rem; letter-spacing: 0.2em; color: var(--rose-deep); }
 .service-body h3 { font-size: 1.85rem; margin: 6px 0 12px; }
-.service-body p { color: var(--muted); font-size: 0.97rem; margin-bottom: 22px; flex: 1; }
+.service-body p { color: var(--muted); font-size: 0.97rem; margin-bottom: 24px; flex: 1; }
+.service-cta { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px; }
+.service-cta span { transition: transform .3s var(--ease); }
+.service-cta:hover span { transform: translateX(4px); }
 
 /* ---------- Steps ---------- */
 .steps-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; counter-reset: s; }
@@ -616,8 +619,9 @@ h1 em, h2 em { font-style: italic; color: var(--rose-deep); font-weight: 400; }
   .qa-wa svg { width: 26px; height: 26px; }
   .qa-label { display: none; }
   .hero-actions .btn { flex: 1 1 100%; }
-  .badge-num { font-size: 2.2rem; }
-  .hero-badge { padding: 14px 16px; }
+  .badge-num { font-size: 2.8rem; }
+  .badge-text { font-size: 0.92rem; }
+  .hero-badge { padding: 14px 18px; gap: 12px; }
 
   .pillars { grid-template-columns: 1fr; gap: 12px; }
   .pillar { gap: 16px; align-items: start; padding: 18px; }
