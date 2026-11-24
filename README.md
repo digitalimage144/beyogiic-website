@@ -8,8 +8,7 @@ A single-page site: plain HTML, CSS and JS, with no build step. Open `index.html
    The phone and WhatsApp number (+91 82910 01827) is already set. Add the Instagram URL if there is one.
    The booking forms send enquiries straight to WhatsApp (the app on phones, WhatsApp Web or Desktop on computers),
    with the name, service, preferred time and goals filled in. Blog-post enquiries also say which article the visitor read.
-2. **Testimonials:** in `index.html`, search for `TODO: replace the three placeholder testimonials`,
-   replace the quotes and names, and delete each `<span class="sample-badge">Sample</span>`.
+2. **Testimonials:** the three cards are in the `testimonials` section of `index.html`. Copy a `<figure class="testimonial">` block to add another.
 3. **Package details:** search for `TODO: add the number of sessions` and update each `.price-meta` line.
 4. **About Kiirti:** search for `TODO: add Kiirti's certifications` to add credentials and experience.
 

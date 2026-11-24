@@ -309,12 +309,19 @@ h1 em, h2 em { font-style: italic; color: var(--rose-deep); font-weight: 400; }
 .testimonial-track { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .testimonial {
   position: relative; background: var(--white);
-  border-radius: var(--radius-lg); padding: 44px 36px 34px;
-  display: flex; flex-direction: column; gap: 26px;
+  border-radius: var(--radius-lg); padding: 36px 32px 30px;
+  display: flex; flex-direction: column;
   box-shadow: 0 1px 0 var(--line);
 }
 .quote-mark { width: 36px; height: 27px; color: var(--rose); opacity: .8; }
-.testimonial blockquote { font-family: var(--serif); font-size: 1.35rem; line-height: 1.45; color: var(--ink); flex: 1; }
+.testimonial blockquote { font-family: var(--serif); font-size: 1.22rem; font-weight: 500; line-height: 1.5; color: var(--ink); flex: 1; margin-bottom: 24px; }
+.t-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+.t-top .quote-mark { margin: 0; }
+.t-stars { color: #E2A226; font-size: 1.05rem; letter-spacing: 0.12em; }
+.t-result {
+  align-self: flex-start; margin-bottom: 14px; padding: 5px 12px; border-radius: 999px;
+  background: var(--sand); color: var(--leaf-deep); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+}
 .testimonial figcaption { display: flex; align-items: center; gap: 14px; padding-top: 22px; border-top: 1px solid var(--line); }
 .testimonial figcaption strong { display: block; font-weight: 500; }
 .testimonial figcaption small { font-size: 0.82rem; color: var(--muted); letter-spacing: 0.04em; }
