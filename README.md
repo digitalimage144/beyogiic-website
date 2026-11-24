@@ -26,17 +26,15 @@ WhatsApp enquiries sent from an article say which article it was, so you can see
 
 ## SEO checklist before launch
 
-1. **Set your domain.** Every page, `sitemap.xml` and `robots.txt` use the placeholder `https://YOUR-DOMAIN.com`.
-   Replace it everywhere in one go (run inside the `site/` folder, using your real domain):
-   ```
-   grep -rl "YOUR-DOMAIN.com" . | xargs sed -i '' 's#YOUR-DOMAIN.com#www.beyogiic.com#g'
-   ```
+1. **Domain:** the site is set up for `https://www.beyogiic.in` (canonical links, sitemap, robots.txt and the `CNAME` file GitHub Pages uses).
+   DNS at the registrar: four A records for `@` (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153)
+   and a CNAME for `www` pointing to `jude1234.github.io`. Then tick **Enforce HTTPS** in the repository Settings → Pages.
 2. **Instagram:** if you have an Instagram page, add `"sameAs": ["https://instagram.com/..."]` to the business details in the `<head>` of `index.html`, next to `"telephone"`.
-3. **Google Search Console** (free): add the site, then submit `https://your-domain/sitemap.xml`.
+3. **Google Search Console** (free): add the site, then submit `https://www.beyogiic.in/sitemap.xml`.
 4. **Google Business Profile:** set it up as a service-area business (address hidden, serving Malad West and nearby), using the same name and phone number as the website.
 5. **Keep the FAQ in sync.** If you edit an FAQ answer in `index.html`, update the matching text in the `FAQPage` data in the `<head>`.
 6. **New blog posts:** add each one to `sitemap.xml`, and change `noindex` to `index` in your copy of the template.
 
 ## Hosting
 
-Upload the whole `site/` folder to any static host (Netlify drag-and-drop, GitHub Pages, cPanel, etc.).
+Hosted on GitHub Pages from https://github.com/jude1234/beyogiic-website (branch `main`, root folder). Changes go live a minute or two after they are pushed.
